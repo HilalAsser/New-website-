@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hilal | Personal Website</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+      .profile {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 20px auto;
+}
+
+.profile img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+      /* Dark Mode Button */
+#darkBtn {
+    padding: 10px 18px;
+    margin-top: 15px;
+    border: none;
+    border-radius: 25px;
+    background: white;
+    color: #4f46e5;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Dark Theme */
+body.dark-mode {
+    background: #121212;
+    color: white;
+}
+
+body.dark-mode .hero,
+body.dark-mode .card {
+    background: #1e1e1e;
+    color: white;
+}
+/* Smooth Page Animation */
+body {
+    animation: fadeIn 1.2s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Profile Photo Animation */
+.profile img {
+    animation: photoZoom 1.5s ease;
+}
+
+@keyframes photoZoom {
+    from {
+        opacity: 0;
+        transform: scale(0.7);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Button Animation */
+button {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+body.dark-mode .hero p,
+body.dark-mode .card p {
+    color: #cccccc;
+}
+
+body.dark-mode .section h2 {
+    color: white;
+}
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: #f4f7ff;
+            color: #222;
+        }
+
+        /* Navbar */
+        nav {
+            background: linear-gradient(135deg, #4f46e5, #7c3aed);
+            padding: 18px;
+            text-align: center;
+        }
+
+        nav h2 {
+            color: white;
+            margin-bottom: 12px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 8px;
+            font-size: 14px;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        /* Hero */
+        .hero {
+            text-align: center;
+            padding: 60px 20px;
+            background: white;
+        }
+
+        .profile {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #6366f1, #9333ea);
+            margin: auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 55px;
+            color: white;
+        }
+
+        .hero h1 {
+            margin-top: 20px;
+            font-size: 32px;
+        }
+
+        .hero p {
+            margin-top: 10px;
+            color: #666;
+            font-size: 16px;
+        }
+
+        .btn {
+            display: inline-block;
+            margin-top: 25px;
+            padding: 12px 25px;
+            background: #4f46e5;
+            color: white;
+            text-decoration: none;
+            border-radius: 25px;
+        }
+
+        /* Cards */
+        .section {
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .section h2 {
+            margin-bottom: 25px;
+        }
+
+        .cards {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .card {
+            background: white;
+            width: 160px;
+            padding: 25px 15px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px #0002;
+        }
+
+        .card h3 {
+            margin-bottom: 10px;
+        }
+
+        .card p {
+            font-size: 13px;
+            color: #666;
+        }
+
+        /* Footer */
+        footer {
+            background: #222;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 20px;
+        }
+      .project-btn {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 8px 15px;
+    background: #4f46e5;
+    color: white;
+    text-decoration: none;
+    border-radius: 20px;
+    font-size: 13px;
+}
+
+.project-btn:hover {
+    background: #7c3aed;
+}
+    </style>
+</head>
+
+<body>
+
+    <nav>
+      
+        <h2>Hilal's Website 🏠</h2>
+
+        <a href="home.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      <button onclick="toggleDarkMode()" id="darkBtn">
+    🌙 Dark Mode
+      </button>
+    </nav>
+
+    <section class="hero">
+
+        <div class="profile">
+    <img src="profile.jpg" alt="My Profile Photo">
+        </div>
+        
+
+        <h1>Hi, I'm Hilal 👋</h1>
+
+        <p>
+            Welcome to my personal website.
+            I am learning Web Development.
+        </p>
+
+        <a class="btn" href="about.html">
+            About Me
+        </a>
+
+    </section>
+
+    <section class="section">
+
+        <h2>My Skills 🚀</h2>
+
+        <div class="cards">
+
+            <div class="card">
+                <h3>🌐 HTML</h3>
+                <p>
+                    I am learning how to build websites using HTML.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>🎨 CSS</h3>
+                <p>
+                    I use CSS to make websites beautiful.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>⚡ JavaScript</h3>
+                <p>
+                    I am learning JavaScript for interactive websites.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+  <section class="section">
+
+    <h2>My Projects 🚀</h2>
+
+    <div class="cards">
+
+        <div class="card">
+            <h3>🌐 Personal Website</h3>
+            <p>
+                My first personal website built with HTML and CSS.
+            </p>
+            <a href="home.html" class="project-btn">View Project</a>
+        </div>
+
+        <div class="card">
+            <h3>🔐 Login Page</h3>
+            <p>
+                A simple login page created using HTML, CSS and JavaScript.
+            </p>
+            <a href="index.html" class="project-btn">View Project</a>
+        </div>
+
+        <div class="card">
+            <h3>📱 Contact Page</h3>
+            <p>
+                A professional contact page for visitors.
+            </p>
+            <a href="contact.html" class="project-btn">View Project</a>
+        </div>
+
+    </div>
+
+  </section>
+  
+
+    <footer>
+        © 2026 Hilal | Personal Website
+    </footer>
+  <script>
+
+function applyTheme() {
+    const isDark = localStorage.getItem("darkMode") === "true";
+
+    document.body.classList.toggle("dark-mode", isDark);
+
+    const button = document.getElementById("darkBtn");
+
+    if (button) {
+        button.innerHTML = isDark ? "☀️ Light Mode" : "🌙 Dark Mode";
+    }
+}
+
+function toggleDarkMode() {
+    const isDark = document.body.classList.toggle("dark-mode");
+
+    localStorage.setItem("darkMode", isDark);
+
+    applyTheme();
+}
+
+document.addEventListener("DOMContentLoaded", applyTheme);
+  </script>
+<!-- Social Media Buttons -->
+<div class="social-buttons">
+
+    <a href="https://www.facebook.com/share/1G9o83NLCw/"
+       target="_blank" class="social-btn facebook">
+        Facebook
+    </a>
+
+    <a href="https://wa.me/923412772362"
+       target="_blank" class="social-btn whatsapp">
+        WhatsApp
+    </a>
+
+    <a href="mailto:hilalaseer999@gmail.com"
+       class="social-btn gmail">
+        Gmail
+    </a>
+
+</div>
+
+<style>
+.social-buttons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin: 30px auto;
+}
+
+.social-btn {
+    padding: 12px 20px;
+    border-radius: 25px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: transform 0.3s ease;
+}
+
+.social-btn:hover {
+    transform: translateY(-4px);
+}
+
+.facebook {
+    background: #1877F2;
+}
+
+.whatsapp {
+    background: #25D366;
+}
+
+.gmail {
+    background: #D93025;
+}
+</style>
+
+</body>
+</html>

@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>About Hilal</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+          animation: fadeIn 1s ease-in-out;
+            background: #f4f7ff;
+            color: #222;
+        }
+
+        nav {
+            background: linear-gradient(135deg, #4f46e5, #7c3aed);
+            padding: 18px;
+            text-align: center;
+        }
+
+        nav h2 {
+            color: white;
+            margin-bottom: 12px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 8px;
+            font-size: 14px;
+        }
+
+        .about {
+            max-width: 700px;
+            margin: 40px auto;
+            padding: 30px 20px;
+            text-align: center;
+        }
+      .qualification-title {
+    text-align: center;
+    color: #5145cd;
+    font-size: 28px;
+    margin: 25px 0;
+}
+
+.qualification {
+    background: white;
+    max-width: 500px;
+    margin: 18px auto;
+    padding: 22px;
+    border-radius: 18px;
+    text-align: center;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.10);
+    border-left: 5px solid #5145cd;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.qualification:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(81, 69, 205, 0.20);
+}
+
+.qualification-icon {
+    font-size: 35px;
+    margin-bottom: 10px;
+}
+
+.qualification h3 {
+    font-size: 21px;
+    color: #333;
+    margin: 10px 0;
+}
+
+.qualification p {
+    font-size: 16px;
+    color: #666;
+    line-height: 1.6;
+}
+
+.qualification.goal {
+    border-left-color: #8a2be2;
+}
+
+        .profile {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin: auto;
+            overflow: hidden;
+            border: 5px solid #4f46e5;
+            box-shadow: 0 5px 20px #0003;
+        }
+
+        .profile img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        h1 {
+            margin-top: 20px;
+            color: #4f46e5;
+        }
+
+        .intro {
+            margin-top: 15px;
+            line-height: 1.7;
+            color: #555;
+        }
+
+        .skills {
+            margin-top: 30px;
+            background: white;
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px #0002;
+        }
+
+        .skills h2 {
+            margin-bottom: 20px;
+        }
+
+        .skill {
+            margin: 15px 0;
+            text-align: left;
+        }
+
+        .skill-name {
+            margin-bottom: 6px;
+            font-weight: bold;
+        }
+
+        .bar {
+            height: 12px;
+            background: #ddd;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .html {
+            width: 80%;
+            height: 100%;
+            background: #4f46e5;
+        }
+
+        .css {
+            width: 70%;
+            height: 100%;
+            background: #7c3aed;
+        }
+
+        .js {
+            width: 50%;
+            height: 100%;
+            background: #9333ea;
+        }
+
+        .btn {
+            display: inline-block;
+            margin-top: 25px;
+            padding: 12px 25px;
+            background: #4f46e5;
+            color: white;
+            text-decoration: none;
+            border-radius: 25px;
+        }
+
+        footer {
+            background: #222;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 30px;
+        }
+      /* Dark Mode */
+body.dark-mode {
+    background: #121212;
+    color: white;
+}
+
+body.dark-mode .about,
+body.dark-mode .skills {
+    background: #1e1e1e;
+    color: white;
+}
+
+body.dark-mode .intro {
+    color: #cccccc;
+}
+
+body.dark-mode .skill-name {
+    color: white;
+}
+
+#darkBtn {
+    padding: 10px 18px;
+    margin-top: 15px;
+    border: none;
+    border-radius: 25px;
+    background: white;
+    color: #4f46e5;
+    font-size: 14px;
+    font-weight: bold;
+}
+      @keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+      }
+    </style>
+</head>
+
+<body>
+
+    <nav>
+        <h2>Hilal's Website 👨‍💻</h2>
+
+        <a href="home.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      <button onclick="toggleDarkMode()" id="darkBtn">
+    🌙 Dark Mode
+      </button>
+    </nav>
+
+    <section class="about">
+
+        <div class="profile">
+            <img src="profile.jpg" alt="Hilal">
+        </div>
+
+        <h1>About Me 👋</h1>
+
+        
+
+<p>
+  Hello! My name is Hilal. I have completed
+  FSc in Computer Science and a Diploma in
+  Information Technology (DIT).
+</p>
+
+<p>
+  I am passionate about technology and want
+  to become a professional Web Developer.
+  I am learning HTML, CSS and JavaScript to
+  build modern and beautiful websites.
+</p>
+
+<h2 class="qualification-title">🎓 My Qualifications</h2>
+
+<div class="qualification">
+    <div class="qualification-icon">🎓</div>
+    <h3>FSc in Computer Science</h3>
+    <p>Successfully Completed</p>
+</div>
+
+<div class="qualification">
+    <div class="qualification-icon">💻</div>
+    <h3>Diploma in Information Technology (DIT)</h3>
+    <p>Successfully Completed</p>
+</div>
+
+<div class="qualification goal">
+    <div class="qualification-icon">🚀</div>
+    <h3>My Career Goal</h3>
+    <p>I want to become a professional Web Developer and create modern, beautiful websites.</p>
+</div>
+
+        <div class="skills">
+
+            <h2>My Skills 🚀</h2>
+
+            <div class="skill">
+                <div class="skill-name">HTML - 80%</div>
+                <div class="bar">
+                    <div class="html"></div>
+                </div>
+            </div>
+
+            <div class="skill">
+                <div class="skill-name">CSS - 70%</div>
+                <div class="bar">
+                    <div class="css"></div>
+                </div>
+            </div>
+
+            <div class="skill">
+                <div class="skill-name">JavaScript - 50%</div>
+                <div class="bar">
+                    <div class="js"></div>
+                </div>
+            </div>
+
+        </div>
+
+        <a class="btn" href="contact.html">
+            Contact Me 📞
+        </a>
+
+    </section>
+
+    <footer>
+        © 2026 Hilal | Personal Website
+    </footer>
+<script>
+function applyTheme() {
+    const isDark = localStorage.getItem("darkMode") === "true";
+
+    document.body.classList.toggle("dark-mode", isDark);
+
+    const button = document.getElementById("darkBtn");
+
+    if (button) {
+        button.innerHTML = isDark ? "☀️ Light Mode" : "🌙 Dark Mode";
+    }
+}
+
+function toggleDarkMode() {
+    const isDark = document.body.classList.toggle("dark-mode");
+
+    localStorage.setItem("darkMode", isDark);
+
+    applyTheme();
+}
+
+document.addEventListener("DOMContentLoaded", applyTheme);
+</script>
+</body>
+</html>
