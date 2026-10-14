@@ -1,341 +1,456 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>About Hilal</title>
-
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>About Me | Hilal Ahmad</title>
 
     <style>
         * {
-            box-sizing: border-box;
             margin: 0;
             padding: 0;
-            font-family: Arial, sans-serif;
+            box-sizing: border-box;
         }
 
         body {
-          animation: fadeIn 1s ease-in-out;
-            background: #f4f7ff;
-            color: #222;
+            font-family: Arial, sans-serif;
+            background: #f4f8ff;
+            color: #1e293b;
+            line-height: 1.7;
+        }
+
+        header {
+            background: white;
+            padding: 18px 7%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            box-shadow: 0 3px 15px rgba(0,0,0,0.06);
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #1769e0;
         }
 
         nav {
-            background: linear-gradient(135deg, #4f46e5, #7c3aed);
-            padding: 18px;
-            text-align: center;
-        }
-
-        nav h2 {
-            color: white;
-            margin-bottom: 12px;
+            display: flex;
+            gap: 18px;
+            flex-wrap: wrap;
         }
 
         nav a {
-            color: white;
             text-decoration: none;
-            margin: 0 8px;
-            font-size: 14px;
+            color: #334155;
+            font-weight: bold;
         }
 
-        .about {
-            max-width: 700px;
-            margin: 40px auto;
-            padding: 30px 20px;
+        nav a:hover {
+            color: #1769e0;
+        }
+
+        .hero {
             text-align: center;
+            padding: 45px 20px;
+            background: linear-gradient(135deg, #dbeafe, #ffffff);
         }
-      .qualification-title {
-    text-align: center;
-    color: #5145cd;
-    font-size: 28px;
-    margin: 25px 0;
-}
 
-.qualification {
-    background: white;
-    max-width: 500px;
-    margin: 18px auto;
-    padding: 22px;
-    border-radius: 18px;
-    text-align: center;
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.10);
-    border-left: 5px solid #5145cd;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
+        .hero h1 {
+            font-size: 38px;
+            color: #1769e0;
+            margin-bottom: 8px;
+        }
 
-.qualification:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 25px rgba(81, 69, 205, 0.20);
-}
+        .hero p {
+            color: #64748b;
+        }
 
-.qualification-icon {
-    font-size: 35px;
-    margin-bottom: 10px;
-}
-
-.qualification h3 {
-    font-size: 21px;
-    color: #333;
-    margin: 10px 0;
-}
-
-.qualification p {
-    font-size: 16px;
-    color: #666;
-    line-height: 1.6;
-}
-
-.qualification.goal {
-    border-left-color: #8a2be2;
-}
+        .container {
+            max-width: 1000px;
+            margin: 35px auto;
+            padding: 0 20px;
+        }
 
         .profile {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            margin: auto;
-            overflow: hidden;
-            border: 5px solid #4f46e5;
-            box-shadow: 0 5px 20px #0003;
+            background: white;
+            padding: 28px;
+            border-radius: 18px;
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            flex-wrap: wrap;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
         }
 
         .profile img {
-            width: 100%;
-            height: 100%;
+            width: 190px;
+            height: 210px;
             object-fit: cover;
+            object-position: center;
+            border-radius: 15px;
         }
 
-        h1 {
-            margin-top: 20px;
-            color: #4f46e5;
+        .profile-text {
+            flex: 1;
+            min-width: 220px;
         }
 
-        .intro {
-            margin-top: 15px;
-            line-height: 1.7;
-            color: #555;
+        h2 {
+            color: #1769e0;
+            margin-bottom: 15px;
         }
 
-        .skills {
+        .profile-text p {
+            color: #64748b;
+        }
+
+        .section {
             margin-top: 30px;
             background: white;
-            padding: 25px;
-            border-radius: 15px;
-            box-shadow: 0 5px 15px #0002;
-        }
-
-        .skills h2 {
-            margin-bottom: 20px;
+            padding: 28px;
+            border-radius: 18px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
         }
 
         .skill {
-            margin: 15px 0;
-            text-align: left;
+            margin-bottom: 18px;
         }
 
-        .skill-name {
-            margin-bottom: 6px;
+        .skill-info {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 7px;
             font-weight: bold;
         }
 
         .bar {
-            height: 12px;
-            background: #ddd;
-            border-radius: 10px;
+            height: 11px;
+            background: #e2e8f0;
+            border-radius: 20px;
             overflow: hidden;
         }
 
-        .html {
-            width: 80%;
+        .progress {
             height: 100%;
-            background: #4f46e5;
+            background: linear-gradient(90deg, #1769e0, #60a5fa);
+            border-radius: 20px;
         }
 
-        .css {
-            width: 70%;
-            height: 100%;
-            background: #7c3aed;
+        .html { width: 80%; }
+        .css { width: 70%; }
+        .javascript { width: 50%; }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 18px;
         }
 
-        .js {
-            width: 50%;
-            height: 100%;
-            background: #9333ea;
+        .card {
+            background: #f4f8ff;
+            padding: 22px;
+            border-radius: 12px;
+            border-left: 4px solid #1769e0;
         }
 
-        .btn {
-            display: inline-block;
-            margin-top: 25px;
-            padding: 12px 25px;
-            background: #4f46e5;
+        .card h3 {
+            color: #1769e0;
+            margin-bottom: 8px;
+        }
+
+        .card p {
+            color: #64748b;
+        }
+
+        .goal {
+            text-align: center;
+            background: #1769e0;
             color: white;
+            padding: 30px 20px;
+            border-radius: 16px;
+            margin-top: 30px;
+        }
+
+        .goal h2 {
+            color: white;
+        }
+
+        .goal p {
+            max-width: 650px;
+            margin: auto;
+        }
+
+        .contact-btn {
+            display: inline-block;
+            margin-top: 18px;
+            padding: 11px 22px;
+            background: white;
+            color: #1769e0;
             text-decoration: none;
-            border-radius: 25px;
+            font-weight: bold;
+            border-radius: 8px;
         }
 
         footer {
-            background: #222;
-            color: white;
+            margin-top: 40px;
+            background: white;
             text-align: center;
-            padding: 20px;
-            margin-top: 30px;
+            padding: 22px;
+            color: #64748b;
+            border-top: 1px solid #e2e8f0;
         }
-      /* Dark Mode */
+
+        @media (max-width: 600px) {
+            header {
+                justify-content: center;
+            }
+
+            nav {
+                justify-content: center;
+            }
+
+            .hero h1 {
+                font-size: 30px;
+            }
+
+            .profile {
+                justify-content: center;
+                text-align: center;
+            }
+
+            .profile img {
+                width: 180px;
+                height: 200px;
+            }
+        }
+      /* About Page Dark Mode */
+
 body.dark-mode {
-    background: #121212;
-    color: white;
+    background: #0f172a;
+    color: #f1f5f9;
 }
 
-body.dark-mode .about,
-body.dark-mode .skills {
-    background: #1e1e1e;
-    color: white;
+body.dark-mode header,
+body.dark-mode footer,
+body.dark-mode .profile,
+body.dark-mode .section {
+    background: #1e293b;
+    color: #f1f5f9;
 }
 
-body.dark-mode .intro {
-    color: #cccccc;
+body.dark-mode .hero {
+    background: linear-gradient(135deg, #0f172a, #1e293b);
 }
 
-body.dark-mode .skill-name {
-    color: white;
+body.dark-mode .hero h1,
+body.dark-mode h2,
+body.dark-mode .card h3 {
+    color: #60a5fa;
 }
 
-#darkBtn {
-    padding: 10px 18px;
-    margin-top: 15px;
-    border: none;
-    border-radius: 25px;
-    background: white;
-    color: #4f46e5;
-    font-size: 14px;
-    font-weight: bold;
+body.dark-mode .hero p,
+body.dark-mode .profile-text p,
+body.dark-mode .card p {
+    color: #cbd5e1;
 }
-      @keyframes fadeIn {
+
+body.dark-mode .card {
+    background: #0f172a;
+}
+
+body.dark-mode .bar {
+    background: #334155;
+}
+
+body.dark-mode .goal {
+    background: #1d4ed8;
+}
+
+body.dark-mode nav a {
+    color: #f1f5f9;
+}
+
+body.dark-mode footer {
+    border-color: #334155;
+}
+      /* About Page Animations */
+
+@keyframes aboutFadeIn {
     from {
         opacity: 0;
-        transform: translateY(15px);
+        transform: translateY(20px);
     }
     to {
         opacity: 1;
         transform: translateY(0);
     }
-      }
+}
+
+.hero {
+    animation: aboutFadeIn 0.8s ease-out;
+}
+
+.profile {
+    animation: aboutFadeIn 1s ease-out;
+}
+
+.section {
+    animation: aboutFadeIn 1.2s ease-out;
+}
+
+.goal {
+    animation: aboutFadeIn 1.4s ease-out;
+}
+
+.card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(23, 105, 224, 0.15);
+}
+
+.profile img {
+    transition: transform 0.3s ease;
+}
+
+.profile img:hover {
+    transform: scale(1.04);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+    }
+}
     </style>
 </head>
 
 <body>
 
-    <nav>
-        <h2>Hilal's Website 👨‍💻</h2>
-
-        <a href="home.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="contact.html">Contact</a>
-      <button onclick="toggleDarkMode()" id="darkBtn">
-    🌙 Dark Mode
+    <header>
+        <div class="logo">Hilal Ahmad.</div>
+      <button id="darkModeBtn" onclick="toggleDarkMode()"
+style="background:#1769e0;color:white;padding:10px 15px;
+border:none;border-radius:8px;cursor:pointer;">
+🌙 Dark Mode
       </button>
-    </nav>
 
-    <section class="about">
+        <nav>
+            <a href="home.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
 
-        <div class="profile">
-            <img src="profile.jpg" alt="Hilal">
-        </div>
-
-        <h1>About Me 👋</h1>
-
-        
-
-<p>
-  Hello! My name is Hilal. I have completed
-  FSc in Computer Science and a Diploma in
-  Information Technology (DIT).
-</p>
-
-<p>
-  I am passionate about technology and want
-  to become a professional Web Developer.
-  I am learning HTML, CSS and JavaScript to
-  build modern and beautiful websites.
-</p>
-
-<h2 class="qualification-title">🎓 My Qualifications</h2>
-
-<div class="qualification">
-    <div class="qualification-icon">🎓</div>
-    <h3>FSc in Computer Science</h3>
-    <p>Successfully Completed</p>
-</div>
-
-<div class="qualification">
-    <div class="qualification-icon">💻</div>
-    <h3>Diploma in Information Technology (DIT)</h3>
-    <p>Successfully Completed</p>
-</div>
-
-<div class="qualification goal">
-    <div class="qualification-icon">🚀</div>
-    <h3>My Career Goal</h3>
-    <p>I want to become a professional Web Developer and create modern, beautiful websites.</p>
-</div>
-
-        <div class="skills">
-
-            <h2>My Skills 🚀</h2>
-
-            <div class="skill">
-                <div class="skill-name">HTML - 80%</div>
-                <div class="bar">
-                    <div class="html"></div>
-                </div>
-            </div>
-
-            <div class="skill">
-                <div class="skill-name">CSS - 70%</div>
-                <div class="bar">
-                    <div class="css"></div>
-                </div>
-            </div>
-
-            <div class="skill">
-                <div class="skill-name">JavaScript - 50%</div>
-                <div class="bar">
-                    <div class="js"></div>
-                </div>
-            </div>
-
-        </div>
-
-        <a class="btn" href="contact.html">
-            Contact Me 📞
-        </a>
-
+    <section class="hero">
+        <h1>About Me</h1>
+        <p>Get to know me, my education and my skills.</p>
     </section>
 
+    <main class="container">
+
+        <section class="profile">
+            <img src="profile.jpg" alt="Hilal Ahmad">
+
+            <div class="profile-text">
+                <h2>Who Am I?</h2>
+
+                <p>
+                    Hello! My name is Hilal Ahmad. I am learning web
+                    development and working to improve my technical skills.
+                    I enjoy learning how websites are designed and built.
+                </p>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>My Skills</h2>
+
+            <div class="skill">
+                <div class="skill-info">
+                    <span>HTML</span>
+                    <span>80%</span>
+                </div>
+                <div class="bar">
+                    <div class="progress html"></div>
+                </div>
+            </div>
+
+            <div class="skill">
+                <div class="skill-info">
+                    <span>CSS</span>
+                    <span>70%</span>
+                </div>
+                <div class="bar">
+                    <div class="progress css"></div>
+                </div>
+            </div>
+
+            <div class="skill">
+                <div class="skill-info">
+                    <span>JavaScript</span>
+                    <span>50%</span>
+                </div>
+                <div class="bar">
+                    <div class="progress javascript"></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>My Education</h2>
+
+            <div class="cards">
+                <div class="card">
+                    <h3>FSc Computer Science</h3>
+                    <p>My educational qualification in Computer Science.</p>
+                </div>
+
+                <div class="card">
+                    <h3>DIT</h3>
+                    <p>Diploma in Information Technology.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="goal">
+            <h2>My Career Goal</h2>
+
+            <p>
+                My goal is to become a professional web developer,
+                create modern websites and continue learning new technologies.
+            </p>
+
+            <a href="contact.html" class="contact-btn">Contact Me</a>
+        </section>
+
+    </main>
+
     <footer>
-        © 2026 Hilal | Personal Website
+        <p>© 2026 Hilal Ahmad | Personal Website</p>
     </footer>
-<script>
-function applyTheme() {
-    const isDark = localStorage.getItem("darkMode") === "true";
+  <script>
+function toggleDarkMode() {
+    document.body.classList.toggle("dark-mode");
 
-    document.body.classList.toggle("dark-mode", isDark);
+    const button = document.getElementById("darkModeBtn");
 
-    const button = document.getElementById("darkBtn");
-
-    if (button) {
-        button.innerHTML = isDark ? "☀️ Light Mode" : "🌙 Dark Mode";
+    if (document.body.classList.contains("dark-mode")) {
+        button.innerHTML = "☀️ Light Mode";
+    } else {
+        button.innerHTML = "🌙 Dark Mode";
     }
 }
+  </script>
 
-function toggleDarkMode() {
-    const isDark = document.body.classList.toggle("dark-mode");
-
-    localStorage.setItem("darkMode", isDark);
-
-    applyTheme();
-}
-
-document.addEventListener("DOMContentLoaded", applyTheme);
-</script>
 </body>
 </html>

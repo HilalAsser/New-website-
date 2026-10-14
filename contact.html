@@ -1,207 +1,421 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <title>Contact Hilal</title>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <title>Contact Me | Hilal Ahmad</title>
+
     <style>
-      body.dark-mode {
-    background: #121212;
-    color: white;
-}
-
-body.dark-mode .contact {
-    background: #1e1e1e;
-    color: white;
-}
-
-body.dark-mode .contact h1 {
-    color: #a78bfa;
-}
-
-body.dark-mode .contact p {
-    color: #cccccc;
-}
-
-body.dark-mode input,
-body.dark-mode textarea {
-    background: #2a2a2a;
-    color: white;
-    border: 1px solid #555;
-}
-
-#darkBtn {
-    padding: 10px 18px;
-    margin-top: 15px;
-    border: none;
-    border-radius: 25px;
-    background: white;
-    color: #4f46e5;
-    font-size: 14px;
-    font-weight: bold;
-}
         * {
-            box-sizing: border-box;
             margin: 0;
             padding: 0;
-            font-family: Arial, sans-serif;
+            box-sizing: border-box;
         }
 
         body {
-            background: #f4f7ff;
+            font-family: Arial, sans-serif;
+            background: #f4f8ff;
+            color: #1e293b;
+            line-height: 1.6;
+        }
+
+        header {
+            background: white;
+            padding: 18px 7%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            box-shadow: 0 3px 15px rgba(0,0,0,0.06);
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #1769e0;
         }
 
         nav {
-            background: linear-gradient(135deg, #4f46e5, #7c3aed);
-            padding: 18px;
-            text-align: center;
-        }
-
-        nav h2 {
-            color: white;
-            margin-bottom: 12px;
+            display: flex;
+            gap: 18px;
+            flex-wrap: wrap;
         }
 
         nav a {
-            color: white;
             text-decoration: none;
-            margin: 0 8px;
+            color: #334155;
+            font-weight: bold;
         }
 
-        .contact {
-            max-width: 600px;
-            margin: 40px auto;
-            padding: 30px 20px;
-            background: white;
-            border-radius: 20px;
-            box-shadow: 0 5px 20px #0002;
+        nav a:hover {
+            color: #1769e0;
         }
 
-        .contact h1 {
+        .hero {
             text-align: center;
-            color: #4f46e5;
+            padding: 45px 20px;
+            background: linear-gradient(135deg, #dbeafe, #ffffff);
+        }
+
+        .hero h1 {
+            color: #1769e0;
+            font-size: 38px;
             margin-bottom: 10px;
         }
 
-        .contact p {
-            text-align: center;
-            color: #666;
-            margin-bottom: 25px;
+        .hero p {
+            color: #64748b;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 35px auto;
+            padding: 0 20px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+            gap: 25px;
+        }
+
+        .box {
+            background: white;
+            padding: 28px;
+            border-radius: 16px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+        }
+
+        h2 {
+            color: #1769e0;
+            margin-bottom: 18px;
+        }
+
+        .field {
+            margin-bottom: 16px;
+        }
+
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 6px;
         }
 
         input, textarea {
             width: 100%;
-            padding: 14px;
-            margin-bottom: 15px;
-            border: 1px solid #ddd;
-            border-radius: 10px;
+            padding: 12px;
+            border: 1px solid #cbd5e1;
+            border-radius: 8px;
+            font-size: 15px;
+            font-family: Arial, sans-serif;
+        }
+
+        input:focus, textarea:focus {
             outline: none;
+            border-color: #1769e0;
+            box-shadow: 0 0 0 3px #dbeafe;
         }
 
         textarea {
-            height: 130px;
-            resize: none;
+            resize: vertical;
+            min-height: 120px;
         }
 
         button {
             width: 100%;
-            padding: 14px;
+            padding: 13px;
             border: none;
-            border-radius: 25px;
-            background: #4f46e5;
+            border-radius: 8px;
+            background: #1769e0;
             color: white;
             font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s;
         }
 
         button:hover {
-            background: #7c3aed;
+            background: #0f4fb3;
+        }
+
+        .social-text {
+            color: #64748b;
+            margin-bottom: 20px;
+        }
+
+        .social-btn {
+            display: block;
+            text-align: center;
+            text-decoration: none;
+            color: white;
+            padding: 13px;
+            border-radius: 8px;
+            margin-bottom: 13px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .social-btn:hover {
+            transform: translateY(-3px);
+            opacity: 0.9;
+        }
+
+        .whatsapp {
+            background: #16a34a;
+        }
+
+        .gmail {
+            background: #dc2626;
+        }
+
+        .facebook {
+            background: #1877f2;
+        }
+
+        #success {
+            display: none;
+            margin-top: 15px;
+            padding: 12px;
+            background: #dcfce7;
+            color: #166534;
+            border-radius: 8px;
+            text-align: center;
         }
 
         footer {
-            background: #222;
-            color: white;
+            margin-top: 40px;
+            background: white;
             text-align: center;
-            padding: 20px;
-            margin-top: 30px;
+            padding: 22px;
+            color: #64748b;
+            border-top: 1px solid #e2e8f0;
         }
+
+        @media (max-width: 600px) {
+            header {
+                justify-content: center;
+            }
+
+            nav {
+                justify-content: center;
+            }
+
+            .hero h1 {
+                font-size: 30px;
+            }
+        }
+      /* Contact Page Dark Mode */
+
+body.dark-mode {
+    background: #0f172a;
+    color: #f1f5f9;
+}
+
+body.dark-mode header,
+body.dark-mode footer,
+body.dark-mode .box {
+    background: #1e293b;
+    color: #f1f5f9;
+}
+
+body.dark-mode .hero {
+    background: linear-gradient(135deg, #0f172a, #1e293b);
+}
+
+body.dark-mode .hero h1,
+body.dark-mode h2 {
+    color: #60a5fa;
+}
+
+body.dark-mode .hero p,
+body.dark-mode .social-text {
+    color: #cbd5e1;
+}
+
+body.dark-mode nav a {
+    color: #f1f5f9;
+}
+
+body.dark-mode input,
+body.dark-mode textarea {
+    background: #0f172a;
+    color: #f1f5f9;
+    border-color: #475569;
+}
+
+body.dark-mode input::placeholder,
+body.dark-mode textarea::placeholder {
+    color: #94a3b8;
+}
+
+body.dark-mode footer {
+    border-color: #334155;
+      }
+      /* Contact Page Animations */
+
+@keyframes contactFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.hero {
+    animation: contactFadeIn 0.8s ease-out;
+}
+
+.box {
+    animation: contactFadeIn 1s ease-out;
+}
+
+.social-btn {
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.social-btn:hover {
+    transform: translateY(-4px);
+    opacity: 0.9;
+}
+
+input,
+textarea,
+button {
+    transition: all 0.3s ease;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+    }
+}
     </style>
 </head>
 
 <body>
 
-    <nav>
-        <h2>Hilal's Website 👨‍💻</h2>
-
-        <a href="home.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="contact.html">Contact</a>
-      <button onclick="toggleDarkMode()" id="darkBtn">
-    🌙 Dark Mode
+    <header>
+        <div class="logo">Hilal Ahmad.</div>
+      <button id="darkModeBtn" onclick="toggleDarkMode()"
+style="background:#1769e0;color:white;padding:10px 15px;
+border:none;border-radius:8px;cursor:pointer;">
+🌙 Dark Mode
       </button>
-    </nav>
 
-    <section class="contact">
+        <nav>
+            <a href="home.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
 
-        <h1>Contact Me 📞</h1>
-
-        <p>Feel free to send me a message.</p>
-
-        <input type="text" placeholder="Your Name">
-
-        <input type="email" placeholder="Your Email">
-
-        <textarea placeholder="Write your message..."></textarea>
-
-        <button onclick="sendMessage()">
-            Send Message 🚀
-        </button>
-
+    <section class="hero">
+        <h1>Contact Me</h1>
+        <p>Have a question? Feel free to get in touch with me.</p>
     </section>
-  <div style="text-align:center; margin:25px 10px;">
-    <a href="https://wa.me/923412772362"
-       target="_blank"
-       style="display:inline-block;
-       background:#25D366;
-       color:white;
-       padding:15px 25px;
-       border-radius:30px;
-       text-decoration:none;
-       font-weight:bold;">
-       💬 Contact Me on WhatsApp
-    </a>
-  </div>
+
+    <main class="container">
+
+        <section class="box">
+            <h2>Send Me a Message</h2>
+
+            <form id="contactForm">
+                <div class="field">
+                    <label for="name">Your Name</label>
+                    <input type="text" id="name" placeholder="Enter your name" required>
+                </div>
+
+                <div class="field">
+                    <label for="email">Your Email</label>
+                    <input type="email" id="email" placeholder="Enter your email" required>
+                </div>
+
+                <div class="field">
+                    <label for="message">Your Message</label>
+                    <textarea id="message" placeholder="Write your message..." required></textarea>
+                </div>
+
+                <button type="submit">Send Message</button>
+            </form>
+
+            <p id="success">
+                Thank you! Your message has been prepared.
+                Please send it using your email app.
+            </p>
+        </section>
+
+        <section class="box">
+            <h2>Connect With Me</h2>
+
+            <p class="social-text">
+                You can also contact me through these platforms.
+            </p>
+
+            <a class="social-btn whatsapp"
+               href="https://wa.me/92341272362"
+               target="_blank" rel="noopener">
+                WhatsApp
+            </a>
+
+            <a class="social-btn gmail"
+               href="https://mail.google.com/mail/?view=cm&to=hilalaseer999%40gmail.com"
+               target="_blank" rel="noopener">
+                Gmail
+            </a>
+
+            <a class="social-btn facebook"
+               href="https://www.facebook.com/share/1G9o83NLCw/"
+               target="_blank" rel="noopener">
+                Facebook
+            </a>
+        </section>
+
+    </main>
 
     <footer>
-        © 2026 Hilal | Personal Website
+        <p>© 2026 Hilal Ahmad | Personal Website</p>
     </footer>
 
     <script>
-        function sendMessage() {
-            alert("Thank you! Your message has been sent. 🎉");
-        }
+        document.getElementById("contactForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+
+            const name = document.getElementById("name").value.trim();
+            const email = document.getElementById("email").value.trim();
+            const message = document.getElementById("message").value.trim();
+
+            const subject = encodeURIComponent("Website Contact Message");
+            const body = encodeURIComponent(
+                "Name: " + name + "\n" +
+                "Email: " + email + "\n\n" +
+                "Message:\n" + message
+            );
+
+            document.getElementById("success").style.display = "block";
+
+            window.location.href =
+                "mailto:hilalaseer999@gmail.com?subject=" +
+                subject + "&body=" + body;
+        });
     </script>
-<script>
-function applyTheme() {
-    const isDark = localStorage.getItem("darkMode") === "true";
+  <script>
+function toggleDarkMode() {
+    document.body.classList.toggle("dark-mode");
 
-    document.body.classList.toggle("dark-mode", isDark);
+    const button = document.getElementById("darkModeBtn");
 
-    const button = document.getElementById("darkBtn");
-
-    if (button) {
-        button.innerHTML = isDark ? "☀️ Light Mode" : "🌙 Dark Mode";
+    if (document.body.classList.contains("dark-mode")) {
+        button.innerHTML = "☀️ Light Mode";
+    } else {
+        button.innerHTML = "🌙 Dark Mode";
     }
 }
-
-function toggleDarkMode() {
-    const isDark = document.body.classList.toggle("dark-mode");
-
-    localStorage.setItem("darkMode", isDark);
-
-    applyTheme();
-}
-
-document.addEventListener("DOMContentLoaded", applyTheme);
-</script>
+  </script>
 
 </body>
 </html>
